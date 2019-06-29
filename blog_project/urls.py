@@ -18,5 +18,7 @@ from django.urls import path, include # making sure to include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')), # authentication
+    path('accounts/', include('accounts.urls')), # sign-up for accounts
     path('', include('blog.urls')), # home page of the blog
 ]

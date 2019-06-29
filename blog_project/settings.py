@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig', # Declare the Blog app
+    'accounts.apps.AccountsConfig', # establishing sign-ups of user accounts
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # This is for Django to see the static directory in the root
+
+LOGIN_REDIRECT_URL = 'home' # Redirect the user to 'home' upon a successful login.
+LOGOUT_REDIRECT_URL = 'home' # Redirect the user to 'home' upon a successful logout.
